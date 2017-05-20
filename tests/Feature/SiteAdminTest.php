@@ -7,22 +7,8 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class SiteAdminTest extends TestCase
 {
-    /**
-     * Test open master admin panel
-     *
-     * @return void
-     */
-    public function testOpenMasterAdminPanel()
-    {
-        $hostname = 'master.foobar.com';
-        $response = $this->get("http://{$hostname}/");
-
-        $response->assertStatus(200);
-        $response->assertSee('Master admin panel');
-    }
-
     /**
      * Test open site admin panel
      *
@@ -35,20 +21,6 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee("Admin panel of site {$hostname}");
-    }
-
-    /**
-     * Test open site
-     *
-     * @dataProvider siteDomainsProvider
-     * @return void
-     */
-    public function testOpenSite($hostname)
-    {
-        $response = $this->get("http://{$hostname}/");
-
-        $response->assertStatus(200);
-        $response->assertSee("Site {$hostname}");
     }
 
     /**
