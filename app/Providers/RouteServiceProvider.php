@@ -23,7 +23,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Pattern for matching any domain
         $this->app['router']->pattern('domain', '.+');
+
+        // Pattern for matching domain of master admin panel
         $this->app['router']->pattern(
             'masterAdminDomain',
             env('MASTER_ADMIN_DOMAIN', 'master.foobar.com')
