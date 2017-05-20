@@ -36,8 +36,8 @@ class AppServiceProvider extends ServiceProvider
     {
         /**
          * Return the value of the requested domain, if the current route is
-         * defined inside a group that has a `{domain}` pattern as part of
-         * its `domain` parameter. Othewise null will be returned.
+         * defined inside of a group, that has a `{domain}` pattern as part
+         * of its `domain` parameter. Othewise null will be returned.
          *
          * @return string|null
          */
@@ -48,7 +48,9 @@ class AppServiceProvider extends ServiceProvider
             return $params['domain'];
         };
 
-        // Extend request object by adding a `site` macro into it.
+        // Extend request by adding a `site` macro into it. Macro is available
+        // by calling the `site` static method on Request facade or instance
+        // of \Illuminate\Http\Request object later in your application.
         Request::macro('site', $determinateDomainClosure);
     }
 }

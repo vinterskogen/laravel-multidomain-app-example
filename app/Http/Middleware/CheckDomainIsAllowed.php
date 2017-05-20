@@ -15,7 +15,7 @@ class CheckDomainIsAllowed
      */
     public function handle($request, Closure $next)
     {
-        $requestedDomain = $request->site();
+        $requestedDomain = $request::site();
         $allowedDomains = [
             'site-1-foo.com',
             'site-2-bar.com',
