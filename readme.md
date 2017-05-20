@@ -2,7 +2,7 @@
 
 ## Task
 
-The core idea is to build system to run and manage a swarm of web-sites, with
+The core idea is to build system to run and manage a swarm of web-sites that have
 identical structure (that use the same routes and templates), but have a
 different content with a site admin panel to edit content on site, and a master
 admin panel to add and delete sites.
@@ -10,20 +10,20 @@ admin panel to add and delete sites.
 This is a typical business case for franchise or distributors network.
 
 So we need to make a multidomain application, that supports 3 different types of
-web-interface and responds according to which domain is requested, with whole
-different routes tables for each type.
+web-interface and responds according to which domain is requested.
 
 Types of web-interface:
 
 1. **Master admin panel**. A place for master-admin to rule multiple sites (them all).
 Located on a domain with a determined name. Example: master.foobar.com
 2. **Sites**. A number of sites, that provide identical pages with different
-content for the internet users. Each site is located on its own domain. Sites
-(including their `domain` attribute) are added and removed at master admin panel.
+content for the internet users. Each site is located on its own domain. 
 3. **Site admin panel**. A place to manage site content. Located on the same domain
 with the site, with `/manager` prefix.
 
 ## Arcitecture
+
+Steps we need to take to implemet the described taks:
 
 - In RouteServiceProvider:
     - Add a regexp pattern to match a domain. This pattern may be applied to a
