@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return 'Master admin panel';
+        return 'Wellcome! This is master admin panel.';
     }
 
 }

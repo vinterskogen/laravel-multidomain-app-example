@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        return "Admin panel of site {$request->site()}";
+        return "Wellcome! This is admin panel of site {$request->site()}.";
     }
 
 }

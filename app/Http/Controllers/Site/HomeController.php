@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        return "Site {$request->site()}";
+        return "Wellcome! This is site {$request->site()}.";
     }
 
 }

@@ -20,6 +20,6 @@ class MasterAdminTest extends TestCase
         $response = $this->get("http://{$hostname}/");
 
         $response->assertStatus(200);
-        $response->assertSee('Master admin panel');
+        $response->assertSee('master admin panel');
     }
 }

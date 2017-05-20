@@ -20,7 +20,7 @@ class SiteTest extends TestCase
         $response = $this->get("http://{$hostname}/");
 
         $response->assertStatus(200);
-        $response->assertSee("Site {$hostname}");
+        $response->assertSee("site {$hostname}");
     }
 
     /**

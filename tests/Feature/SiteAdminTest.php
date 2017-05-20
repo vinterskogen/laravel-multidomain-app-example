@@ -20,7 +20,7 @@ class SiteAdminTest extends TestCase
         $response = $this->get("http://{$hostname}/manager");
 
         $response->assertStatus(200);
-        $response->assertSee("Admin panel of site {$hostname}");
+        $response->assertSee("admin panel of site {$hostname}");
     }
 
     /**
