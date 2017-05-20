@@ -81,21 +81,6 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Dump routes
-     *
-     * @return void
-     */
-    protected function dumpRoutes()
-    {
-        $routes = [];
-        foreach (Route::getRoutes() as $route) {
-            $routes[] = $route->uri();
-        }
-        dd($routes);
-    }
-
-
-    /**
      * Define the "api" routes for the application.
      *
      * These routes are typically stateless.
