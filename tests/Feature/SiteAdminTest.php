@@ -24,6 +24,20 @@ class SiteAdminTest extends TestCase
     }
 
     /**
+     * Test can not open site
+     *
+     * @dataProvider disallowedSiteDomainsProvider
+     * @return void
+     */
+    public function testCanNotOpenSiteAdminPanel($hostname)
+    {
+        $response = $this->get("http://{$hostname}/");
+
+        $response->assertStatus(400);
+        $response->assertSee("Domain not allowed");
+    }
+
+    /**
      * Site domains provider
      *
      * @return array
@@ -36,6 +50,23 @@ class SiteAdminTest extends TestCase
                 'site-2-bar.com'
             ], [
                 'site-3-baz.com'
+            ],
+        ];
+    }
+
+    /**
+     * Disallowed site domains provider
+     *
+     * @return array
+     */
+    public function disallowedSiteDomainsProvider()
+    {
+        return [[
+                'disallowed-1-foo.com'
+            ], [
+                'disallowed-2-bar.com'
+            ], [
+                'disallowed-3-baz.com'
             ],
         ];
     }
