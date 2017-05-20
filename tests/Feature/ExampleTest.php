@@ -45,7 +45,7 @@ class ExampleTest extends TestCase
      */
     public function testOpenSite($hostname)
     {
-        $response = $this->get("http://{$hostname}.com/");
+        $response = $this->get("http://{$hostname}/");
 
         $response->assertStatus(200);
         $response->assertSee("Site {$hostname}");
