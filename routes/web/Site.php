@@ -8,5 +8,3 @@ Route::group([
         Route::get('/', 'HomeController@index');
     }
 );
-
-
