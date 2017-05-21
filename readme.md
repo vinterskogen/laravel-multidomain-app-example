@@ -77,7 +77,7 @@ database, of course.
     - Add 3 folders (by web-interface type) into `app/Http/Controllers` folder:
         - `Site`
         - `Admin`
-        - `MasterAdmin
+        - `MasterAdmin`
     - Add a base Controller and a HomeController in each of these 3 folders
 
 ## Conclusion
