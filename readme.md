@@ -54,7 +54,7 @@ that was requested. We add two named patterns:
         - `domain` - for matching any domain, will be used for sites
         - `masterAdminDomain` - for matching a domain of Master-admin panel
     - Define all the routes. Routes are stored in separate files inside a
-`routes/web/` folder and wrapped in 3 groups (sorted by web-interface type),
+`routes/web/` folder and wrapped in 3 groups (sorted by web-interface type)
 with a number of attribute, such as `domain`, `namespace` and `prefix` for each
 group.
 
@@ -62,26 +62,28 @@ group.
     - Extend request facade by adding a `site` method, which returns the value
 of the requested domain, extracting it from the Route parameters, where it was
 stored while matching the `host` header from the income request against the
-`domain` attribute (which includes previously defined named patterns) of the
-groups of routes.
+`domain` attribute of the groups of routes (which includes `domain` pattern,
+that we had previously defined).  
 
-- Add a new middleware:
+- Add a new custom middleware:
     - Add a `CheckDomainIsAllowed` middleware class to determinate is the
 requested domain in list of allowed domains (otherwise abort request with HTTP
 400 error response) and apply it to the route groups for sites and site admin
-panels.
+panels. Note: in real life list of allowed domains should be stored in
+database, of course.
 
 - Controllers changes:
     - Remove a `app/Http/Controllers/Controller.php` file
-    - Add 3 folders (by web-interface type) into `app/Http/Controllers` folder
-    - Add a base controller in each of 3 folders (`MasterAdmin`, `Admin`,
-`Site`) and a HomeController
-
+    - Add 3 folders (by web-interface type) into `app/Http/Controllers` folder:
+        - `Site`
+        - `Admin`
+        - `MasterAdmin
+    - Add a base Controller and a HomeController in each of these 3 folders
 
 ## Conclusion
 
 Just run `phpunit`.
 
-All the 3 cases are described and checked with feature (BDD) tests, palced in
-`tests/Feature` folder. Feel free to explore them.
-
+There are 3 test classes (for site, site-admin panel and master-admin panel),
+in `tests/Feature` folder with functional tests, that describes and checks the
+desired behavior of this application. Feel free to explore them.
