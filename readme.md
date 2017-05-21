@@ -12,7 +12,7 @@
 The core idea is to build system to run and manage a swarm of web-sites, that
 have identical structure (e.g. use the same routes and pages templates), but
 displays a different content to the visitors. Sites should have a site admin
-panel to add and edit its content. Also, a master-admin panel show be present
+panel to add and edit its content. Also, a master-admin panel show be presented
 in order to add and delete sites (assumed that sites list is stored in
 database).
 
