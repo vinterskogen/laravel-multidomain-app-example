@@ -45,6 +45,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof DomainNotAllowedException) {
+            return new Response(
+                $exception->getMessage(),
+                Response::HTTP_BAD_REQUEST
+            );
+        }
+
         return parent::render($request, $exception);
     }
 
