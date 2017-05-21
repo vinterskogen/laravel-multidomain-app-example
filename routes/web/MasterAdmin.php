@@ -3,7 +3,7 @@
 Route::group([
         'namespace' => 'MasterAdmin',
         'domain' => '{masterAdminDomain}',
-    ], function() {
+    ], function () {
         Route::get('/', 'HomeController@index');
     }
 );

@@ -16,5 +16,4 @@ class HomeController extends Controller
     {
         return "Wellcome! This is site {$request->site()}.";
     }
-
 }

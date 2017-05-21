@@ -5,7 +5,7 @@ Route::group([
         'domain' => '{domain}',
         'prefix' => '/manager',
         'middleware' => 'checkDomainIsAllowed',
-    ], function() {
+    ], function () {
         Route::get('/', 'HomeController@index');
     }
 );

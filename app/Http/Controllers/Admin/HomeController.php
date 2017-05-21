@@ -15,5 +15,4 @@ class HomeController extends Controller
     {
         return "Wellcome! This is admin panel of site {$request->site()}.";
     }
-
 }

@@ -4,7 +4,7 @@ Route::group([
         'namespace' => 'Site',
         'domain' => '{domain}',
         'middleware' => 'checkDomainIsAllowed',
-    ], function() {
+    ], function () {
         Route::get('/', 'HomeController@index');
     }
 );

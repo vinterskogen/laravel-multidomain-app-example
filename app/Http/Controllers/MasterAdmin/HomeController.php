@@ -15,5 +15,4 @@ class HomeController extends Controller
     {
         return 'Wellcome! This is master admin panel.';
     }
-
 }
