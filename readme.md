@@ -29,7 +29,7 @@ role, assigned to manage one specified site. Examples:
 _franchise-partner.com/manager_, _distribution-partner.com/manager_.
 3. **Master-admin panel**. A dashboard to rule multiple sites (them all). Used by 
 user(s) with the master-admin role. Located on a domain with a determined name.
-Example: _master.foobar.com_
+Example: _master.acme.com_
 
 
 ## Dependencies
