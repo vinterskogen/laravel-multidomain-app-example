@@ -1,6 +1,7 @@
 # Laravel multidomain application example
 
 [![StyleCI](https://styleci.io/repos/91909521/shield?branch=master)](https://styleci.io/repos/91909521)
+[![Build Status](https://travis-ci.org/vinterskogen/laravel-multidomain-app-example.svg?branch=master)](https://travis-ci.org/vinterskogen/laravel-multidomain-app-example)
 
 <p align="center">
     <img src="https://cloud.githubusercontent.com/assets/8015372/26286018/eb47b438-3e63-11e7-9606-fd0277775a02.png?raw=true" alt="Network"/>
