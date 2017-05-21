@@ -22,9 +22,9 @@ before_install:
   - if [[ $xdebug = 'true' ]] ; then phpenv config-rm xdebug.ini; fi
 
 install:
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction --no-suggest; fi
   - php -r "file_exists('.env') || copy('.env.example', '.env');"
   - php artisan key:generate 
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction --no-suggest; fi
 
 script:
   - vendor/bin/phpunit
