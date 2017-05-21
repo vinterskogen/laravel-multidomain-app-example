@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/vinterskogen/laravel-multidomain-app-example.svg?branch=master)](https://travis-ci.org/vinterskogen/laravel-multidomain-app-example)
 
 <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/8015372/26286018/eb47b438-3e63-11e7-9606-fd0277775a02.png?raw=true" alt="Network"/>
+    <img src="https://cloud.githubusercontent.com/assets/8015372/26286355/3246b124-3e6c-11e7-86a9-38d9510099a9.png?raw=true" alt="Network"/>
 </p>
 
 ## Task
