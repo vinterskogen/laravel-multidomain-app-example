@@ -16,7 +16,10 @@ class CheckDomainIsAllowed
      */
     public function handle($request, Closure $next)
     {
+        // @see App\Providers\AppServiceProvider::setRequestMacros()
         $requestedDomain = $request::site();
+
+        // In real life allowed domains should be stored in database, of course
         $allowedDomains = [
             'site-1-foo.com',
             'site-2-bar.com',
