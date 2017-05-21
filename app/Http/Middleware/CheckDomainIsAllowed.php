@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Response;
 
 class CheckDomainIsAllowed
 {
@@ -23,7 +24,7 @@ class CheckDomainIsAllowed
         ];
 
         if (! in_array($requestedDomain, $allowedDomains)) {
-            return abort(400, 'Domain not allowed');
+            return abort(Response::HTTP_BAD_REQUEST, 'Domain not allowed');
         }
 
         return $next($request);
