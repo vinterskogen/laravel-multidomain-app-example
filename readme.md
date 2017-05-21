@@ -63,4 +63,5 @@ This example application requires Laravel 5.4.
 ## Conclusion
 
 All the 3 cases are described with feature (BDD) tests within the `tests/Feature`.
+
 Just run `phpunit`.
