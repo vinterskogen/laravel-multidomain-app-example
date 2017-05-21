@@ -1,5 +1,8 @@
 # Laravel multidomain application example
 
+<p align="center">
+    <img src="https://cloud.githubusercontent.com/assets/8015372/26286018/eb47b438-3e63-11e7-9606-fd0277775a02.png?raw=true" alt="Network"/>
+</p>
 
 ## Task
 
