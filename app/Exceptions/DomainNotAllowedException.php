@@ -13,5 +13,4 @@ class DomainNotAllowedException extends Exception
     {
         $this->message = $message;
     }
-
 }
