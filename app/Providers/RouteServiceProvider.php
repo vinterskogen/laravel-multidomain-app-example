@@ -48,19 +48,19 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define the "one.com" routes for the application.
+     * Routes for the site.
      *
      * @return void
      */
-    protected function mapMasterAdminRoutes()
+    protected function mapSiteRoutes()
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web/MasterAdmin.php'));
+             ->group(base_path('routes/web/Site.php'));
     }
 
     /**
-     * Define the "two.com" routes for the application.
+     * Routes for the site admin panel.
      *
      * @return void
      */
@@ -72,15 +72,15 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
-     * Define routes for other domains.
+     * Routes for the master admin panel.
      *
      * @return void
      */
-    protected function mapSiteRoutes()
+    protected function mapMasterAdminRoutes()
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web/Site.php'));
+             ->group(base_path('routes/web/MasterAdmin.php'));
     }
 
     /**
