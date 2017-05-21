@@ -3,7 +3,7 @@
 ## Task
 
 The core idea is to build system to run and manage a swarm of web-sites that have
-identical structure (that use the same routes and templates), but have a
+identical structure (e.g. use the same routes and pages templates), but have a
 different content with a site admin panel to edit content on site, and a master
 admin panel to add and delete sites.
 
